@@ -35,7 +35,7 @@ form.addEventListener('submit', function (event) {
   </div>`;
         return;
     }
-    
+
     /* Risparmiamo risorse, non serve calcolare il prezzo se i dati sono errati. */
     let basePrice = distance * kmPrice;
     let discountPercent = 0;
@@ -60,7 +60,7 @@ form.addEventListener('submit', function (event) {
     <div class="card-body">
       <h5 class="card-title">Biglietto del treno</h5>
       <p class="card-text mb-1"><strong>Età:</strong> ${age} anni</p>
-      <p class="card-text mb-1"><strong>Distanza:</strong> ${distance} km</p>
+      <p class="card-text mb-1"><strong>Distanza:</strong> ${distance.toFixed(2)} km</p>
       <p class="card-text mb-1"><strong>Prezzo base:</strong> ${basePrice.toFixed(2)} €</p>
       <p class="card-text mb-1"><strong>Sconto applicato:</strong> ${discountPercent}%</p>
       <p class="card-text fw-bold"><strong>Prezzo finale:</strong> ${price.toFixed(2)} €</strong></p>
