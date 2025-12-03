@@ -1,4 +1,7 @@
 //calcolatore
+/*Ora voglio collegarlo a Bootstrap e creare una piccola interfaccia grafica per l'utente.
+L'utente dovrà inserire:
+- la distanza in km che vuole percorrere*/
 
 let price = 0;
 const kmPrice = 0.21;
@@ -36,5 +39,3 @@ else if (age >= seniorsAgeLimit) {
 alert("Il prezzo finale del biglietto è di " + price.toFixed(2) + " euro.");
 console.log("Il prezzo finale del biglietto è di " + price.toFixed(2) + " euro.");
 
-/* Ora voglio aggiungere un ciclo while che controlli se l'utente ha inserito dei valori validi per età e distanza.
-Se l'età non è un numero positivo o la distanza non è un numero positivo, chiedo di reinserire i valori. */
