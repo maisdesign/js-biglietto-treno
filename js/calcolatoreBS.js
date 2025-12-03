@@ -52,5 +52,7 @@ form.addEventListener('submit', function (event) {
     // Mostra il prezzo finale nell'interfaccia grafica
     resultDiv.innerHTML = `<div class="alert alert-success" role="alert">
         Il prezzo finale del biglietto è di ${price.toFixed(2)} €.
+        <hr>
+        Comprato per un utente di ${age} anni che vuole percorrere ${distance} km.
     </div>`;
 });
