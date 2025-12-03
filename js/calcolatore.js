@@ -36,6 +36,5 @@ else if (age >= seniorsAgeLimit) {
 }
 
 //Prezzo finale:
-alert("Il prezzo finale del biglietto è di " + price.toFixed(2) + " euro.");
-console.log("Il prezzo finale del biglietto è di " + price.toFixed(2) + " euro.");
-
+alert("Il prezzo finale del biglietto è di " + price.toFixed(2) + " €.");
+console.log("Il prezzo finale del biglietto è di " + price.toFixed(2) + " €.");

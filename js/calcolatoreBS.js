@@ -18,17 +18,21 @@ const minorsAgeLimit = 18;
 const seniorsAgeLimit = 65;
 
 /*Ora lo script deve leggere i dati inseriti dall'utente nel form quando questo viene inviato.*/
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
     event.preventDefault(); // Impedisce il comportamento predefinito del form, quindi il reload della pagina.
     let age = parseInt(ageInput.value);
     let distance = parseFloat(distanceInput.value);
     // Validazione degli input
     if (isNaN(age) || age <= 0) {
-        alert("Valore non valido. Inserisci la tua età (numero positivo):");
+        resultDiv.innerHTML = `<div class="alert alert-danger" role="alert">
+            Valore non valido. Inserisci la tua età (numero positivo superiore a 0).
+        </div>`;
         return;
     }
     if (isNaN(distance) || distance <= 0) {
-        alert("Valore non valido. Inserisci la distanza in km (numero positivo):");
+        resultDiv.innerHTML = `<div class="alert alert-danger" role="alert">
+        Valore non valido. Inserisci la distanza in km (numero positivo superiore a 0).
+  </div>`;
         return;
     }
     // Calcolo del prezzo base:
@@ -36,15 +40,17 @@ form.addEventListener('submit', function(event) {
 
     if (age < minorsAgeLimit) {
         price = price * (1 - minorDiscount);
-        
+
     }
     else if (age >= seniorsAgeLimit) {
         price = price * (1 - seniorDiscount);
-        
+
     } else {
-        
+
     }
 
     // Mostra il prezzo finale nell'interfaccia grafica
-    resultDiv.textContent = "Il prezzo finale del biglietto è di " + price.toFixed(2) + " euro.";
+    resultDiv.innerHTML = `<div class="alert alert-success" role="alert">
+        Il prezzo finale del biglietto è di ${price.toFixed(2)} €.
+    </div>`;
 });
